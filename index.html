@@ -48,40 +48,44 @@
             margin: 40px auto;
         }
 
-        /* תיבת הנחיה מאובטחת */
-        .notice-bar {
-            background-color: #eff6ff;
-            border-right: 5px solid #3b82f6;
-            padding: 15px 20px;
-            border-radius: 8px;
-            text-align: right;
-            margin-bottom: 30px;
-            font-size: 1.05rem;
-            color: #1e3a8a;
-            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
-            line-height: 1.6;
-        }
-
-        .notice-bar p {
-            margin: 5px 0;
-            font-weight: 700; /* כתב עבה */
-        }
-
-        /* כרטיס שיעור */
-        .lesson-card {
+        /* כרטיס שיעור וכרטיס הנחיות */
+        .lesson-card, .important-notice-card {
             background: white;
             border-radius: 16px;
             padding: 25px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             margin-bottom: 40px;
-            border-right: 8px solid var(--primary-green);
             text-align: right;
         }
 
-        /* עיצוב מיוחד לסרטון המבוא הראשי */
-        .intro-card {
+        .lesson-card {
+            border-right: 8px solid var(--primary-green);
+        }
+
+        /* עיצוב מיוחד לתיבת ההנחיות וסרטון המבוא */
+        .intro-card, .important-notice-card {
             border-right: 8px solid var(--brand-orange);
+        }
+
+        .intro-card {
             background: #fff8f2;
+        }
+        
+        .important-notice-card h3 {
+            color: #d93025; /* צבע אדום בולט לחשוב */
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .important-notice-card p {
+            margin: 10px 0;
+            font-size: 1.1rem;
+            color: #1e293b;
+            font-weight: 600;
+            line-height: 1.5;
         }
 
         .lesson-header {
@@ -142,7 +146,7 @@
 
         @media (max-width: 600px) {
             .lesson-title { font-size: 1.2rem; }
-            .lesson-card { padding: 15px; }
+            .lesson-card, .important-notice-card { padding: 15px; }
         }
     </style>
 </head>
@@ -155,9 +159,12 @@
 
     <div class="container">
 
-        <div class="notice-bar">
+        <div class="important-notice-card">
+            <h3>חשוב!!!</h3>
             <p>💡 הסרטונים מאובטחים. כדי שתוכלו לצפות בהם, ודאו שאתם מחוברים בדפדפן לחשבון ה-Gmail שאיתו נרשמתם.</p>
             <p>💡 אם מופיע לכם אישור קובצי Cookie, לחצו על הכפתור הכחול כדי שהסרטון יתחיל לנגן.</p>
+            <p>💡 מומלץ לצפות בכל סרטון מתחילתו ועד סופו ללא קובייה, לפני שמתחילים את הלימוד עם הקובייה.</p>
+            <p>💡 ייתכן שילדים עד גיל 9 יצטרכו עזרת מבוגר בהתחלה.</p>
         </div>
 
         <div class="lesson-card intro-card">
